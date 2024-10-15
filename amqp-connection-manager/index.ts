@@ -9,7 +9,7 @@ export class AmqpConnectionManager {
   }
 
   private connect(): IAmqpConnectionManager {
-    const conn = amqp.connect(["amqp://user:password@localhost:5672"], {
+    const conn = amqp.connect([process.env.AMQP_URL], {
       heartbeatIntervalInSeconds: 5,
       reconnectTimeInSeconds: 1,
     });
