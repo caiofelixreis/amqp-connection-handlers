@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { AmqpConnectionManager } from "./amqp-connection-manager";
 
 function main() {
