@@ -34,11 +34,30 @@ Clone the repository:
 
 Create a .env file in the root directory, consult .env.example.
 
+## Running RabbitMQ with Docker Compose
+
+This repository includes a Docker Compose file to quickly set up a local RabbitMQ broker.
+
+Make sure you have a .env file with your RabbitMQ credentials:
+
+    AMQP_USER=guest
+    AMQP_PASS=guest
+
+### Start RabbitMQ:
+
+    docker-compose up -d
+
+Access the RabbitMQ Management Console at http://localhost:15672.
+
+### To stop the RabbitMQ service, run:
+
+    docker-compose down
+
 # Running the Tests
 
 To start testing the connection approaches:
 
-## amqp-connection-manager
+### amqp-connection-manager
 `npm run amqp-connection-manager`
 
 ### Approaches Explored
